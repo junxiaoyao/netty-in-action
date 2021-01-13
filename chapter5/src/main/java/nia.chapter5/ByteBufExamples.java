@@ -5,6 +5,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.ByteProcessor;
+import org.junit.Test;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
@@ -199,6 +200,7 @@ public class ByteBufExamples {
     /**
      * Listing 5.12 get() and set() usage
      */
+    @Test
     public static void byteBufSetGet() {
         Charset utf8 = Charset.forName("UTF-8");
         ByteBuf buf = Unpooled.copiedBuffer("Netty in Action rocks!", utf8);
